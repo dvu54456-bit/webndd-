@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b11">
+<title>NHẬT NAM IOS — Bảng giá & Hỗ trợ</title>
+<style>
+:root{--bg:#07090e;--panel:rgba(18,23,32,.78);--line:rgba(181,213,255,.22);--white:#f4f7fb;--muted:#9da8b8;--cyan:#4bdcff;--blue:#398bff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--white);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:radial-gradient(ellipse at 50% -15%,#18344b 0,transparent 42%),radial-gradient(ellipse at 100% 40%,#10283b 0,transparent 30%),var(--bg);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(120deg,transparent 0 47%,#a7c6dc 48%,transparent 49%),linear-gradient(35deg,transparent 0 70%,#7d91a5 71%,transparent 72%);background-size:360px 420px,500px 500px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:14px}.brand{display:flex;align-items:center;gap:12px;font-weight:950;letter-spacing:1.6px}.brand-mark{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:#07111b;background:linear-gradient(145deg,#e8f8ff,#48d8ff 58%,#287dff);box-shadow:0 0 26px #39caff4d;font-size:21px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:3px;margin-top:3px}.nav{display:flex;gap:22px;color:#c0cad6;font-size:13px}.nav a:hover{color:var(--cyan)}.contact-btn,.primary{border:1px solid #6be3ff66;background:linear-gradient(135deg,#39cfff,#387bff);color:#041019;padding:12px 17px;border-radius:12px;font-weight:850;box-shadow:0 8px 28px #168bff2c;display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:.2s}.contact-btn:hover,.primary:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.hero{padding:50px 0 38px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:2px;padding:8px 12px;border:1px solid #53dfff45;background:#42cfff0b;border-radius:999px}.pulse{width:7px;height:7px;background:#58e4ff;border-radius:50%;box-shadow:0 0 12px #58e4ff}.hero h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-2.5px;margin:22px 0 18px;font-weight:1000}.hero h1 span{display:block;color:transparent;background:linear-gradient(100deg,#fff,#77e7ff 45%,#5c9cff);background-clip:text;-webkit-background-clip:text;text-shadow:0 0 35px #44caff20}.lead{color:#aeb9c9;line-height:1.8;max-width:550px;font-size:15px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.secondary{border:1px solid var(--line);border-radius:12px;padding:12px 17px;background:#ffffff08;font-weight:750}.secondary:hover{background:#ffffff12}.hero-art{min-height:330px;position:relative;display:grid;place-items:center;perspective:900px}.orb{width:min(300px,78vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 35% 25%,#263c51,#0b111a 60%,#05070b);border:1px solid #a6e9ff55;box-shadow:inset 0 0 40px #42cfff20,0 0 70px #2dbaff1b;transform:rotateY(-12deg) rotateX(5deg)}.orb:before,.orb:after{content:"";position:absolute;inset:-18px;border:1px solid #65dfff4c;border-radius:50%;transform:rotateX(68deg) rotateZ(-18deg)}.orb:after{inset:-34px;transform:rotateX(68deg) rotateZ(42deg);border-color:#78aaff2c}.mascot{font-size:105px;filter:drop-shadow(0 0 20px #42cfff42)}.orb-label{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);white-space:nowrap;font-weight:1000;letter-spacing:3px;color:#dff9ff;text-shadow:0 0 15px #42cfff}.floating{position:absolute;padding:11px 14px;background:#0a111bd9;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px #0008;font-size:12px;color:#dceeff;backdrop-filter:blur(14px)}.floating b{color:var(--cyan)}.f1{top:14%;left:0}.f2{right:0;bottom:16%}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:42px 0 20px}.section-head h2{font-size:clamp(24px,4vw,34px);margin:0;letter-spacing:-.7px}.section-head p{margin:8px 0 0;color:var(--muted);font-size:13px}.tag{color:var(--cyan);font-size:11px;letter-spacing:1.5px;font-weight:900}
+.price-feature{display:grid;grid-template-columns:.8fr 1.2fr;gap:16px;padding:18px;border:1px solid #d0e9ff29;background:linear-gradient(140deg,#ffffff0c,#14202d99);border-radius:24px;box-shadow:0 24px 65px #0005,inset 0 1px #fff1;backdrop-filter:blur(18px)}.feature-brand{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:220px;border-radius:18px;background:radial-gradient(circle at 50% 35%,#1a3e52,#0a1018 70%);border:1px solid #76ddff30}.feature-brand .emblem{font-size:65px;filter:drop-shadow(0 0 18px #37cfff4d)}.feature-brand h3{margin:8px 0 5px;font-size:21px;letter-spacing:2px}.feature-brand p{color:var(--muted);margin:0;font-size:11px;letter-spacing:2px}.price-list{display:grid;gap:9px}.price-row{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:12px;padding:15px 16px;border:1px solid #b9d8ff22;background:linear-gradient(100deg,#ffffff08,#05080d88);border-radius:13px;transition:.2s}.price-row:hover,.product:hover{transform:translateY(-3px);border-color:#55dfff78;box-shadow:0 12px 28px #0005}.ico{font-size:20px;color:#a5edff;text-align:center}.price-row span:nth-child(2){font-weight:700}.price{font-size:20px;font-weight:950;color:#f6fbff;white-space:nowrap}.price em{font-style:normal;color:var(--cyan)}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.product{position:relative;overflow:hidden;display:flex;align-items:center;gap:16px;padding:20px;border-radius:20px;border:1px solid #b9d8ff25;background:linear-gradient(145deg,#ffffff0d,#101722d9);box-shadow:0 15px 38px #0003;transition:.2s;backdrop-filter:blur(12px)}.product:after{content:"";position:absolute;right:-45px;top:-55px;width:130px;height:130px;border-radius:50%;background:#37cfff0c;filter:blur(3px)}.product-icon{flex:0 0 58px;height:58px;border-radius:17px;display:grid;place-items:center;font-size:27px;background:linear-gradient(145deg,#d8f8ff20,#4baaff0b);border:1px solid #8deaff30}.product h3{margin:0 0 6px;font-size:16px}.product p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.product .price{margin-left:auto;align-self:center;font-size:17px}.full{grid-column:1/-1}.contact-panel{margin:35px 0 20px;padding:26px;border:1px solid #8bdfff38;border-radius:22px;background:linear-gradient(110deg,#152b3bde,#090d14f2);display:flex;justify-content:space-between;align-items:center;gap:20px;box-shadow:0 20px 60px #0005}.contact-panel h2{margin:0 0 8px;font-size:25px}.contact-panel p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}.zalo{background:#e8f9ff;color:#06111a}.footer{padding:24px 0 34px;color:#748295;font-size:11px;display:flex;justify-content:space-between;gap:12px;border-top:1px solid #ffffff12;margin-top:28px}.footer strong{color:#d7e7f5}
+.chat-toggle{position:fixed;right:20px;bottom:20px;z-index:20;border:1px solid #baf5ff88;border-radius:999px;padding:13px 17px;display:flex;gap:10px;align-items:center;background:linear-gradient(135deg,#48dfff,#438bff);color:#041019;font-weight:900;box-shadow:0 10px 35px #149bff55;cursor:pointer}.chat-toggle span:first-child{font-size:20px}.chatbox{position:fixed;z-index:19;right:20px;bottom:84px;width:min(350px,calc(100vw - 30px));height:430px;display:none;flex-direction:column;border:1px solid #8bdfff66;border-radius:20px;overflow:hidden;background:#0b111bf5;box-shadow:0 20px 70px #000b;backdrop-filter:blur(20px)}.chatbox.open{display:flex}.chat-head{padding:15px;display:flex;align-items:center;gap:10px;background:linear-gradient(100deg,#17384b,#111b2a);border-bottom:1px solid #ffffff15}.chat-avatar{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#51dcff20;font-size:21px}.chat-head strong{display:block;font-size:13px}.chat-head small{color:#8deaff;font-size:11px}.close-chat{margin-left:auto;border:0;background:#ffffff10;color:#fff;border-radius:8px;padding:7px 10px;cursor:pointer}.messages{padding:14px;display:flex;flex:1;flex-direction:column;gap:10px;overflow:auto}.msg{max-width:88%;padding:10px 12px;border-radius:13px;font-size:12px;line-height:1.6;color:#dbe7f4;background:#ffffff0d;border:1px solid #ffffff12;white-space:pre-wrap}.msg.user{align-self:flex-end;background:#163b51;border-color:#55dfff38}.quick{display:flex;gap:7px;flex-wrap:wrap;padding:0 12px 10px}.quick button{font-size:11px;border:1px solid #6bdcff45;color:#bcefff;background:#142737;border-radius:999px;padding:7px 9px;cursor:pointer}.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid #ffffff15}.chat-input input{min-width:0;flex:1;border:1px solid #ffffff20;background:#05080d;color:white;border-radius:10px;padding:11px;outline:none}.chat-input button{border:0;border-radius:10px;background:#52dfff;color:#061019;font-weight:900;padding:0 13px;cursor:pointer}
+@media(max-width:760px){.nav{display:none}.hero{grid-template-columns:1fr;padding-top:28px;gap:12px}.hero-art{min-height:290px}.orb{width:235px}.mascot{font-size:83px}.f1{left:2%;top:7%}.f2{right:0;bottom:9%}.price-feature{grid-template-columns:1fr;padding:12px}.feature-brand{min-height:160px}.feature-brand .emblem{font-size:46px}.products{grid-template-columns:1fr}.full{grid-column:auto}.contact-panel{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}.price-row{grid-template-columns:30px 1fr auto;padding:13px 10px}.price{font-size:17px}.footer{flex-direction:column}.topbar{padding:15px 0}.brand{font-size:13px}.brand-mark{width:39px;height:39px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="wrap topbar">
+  <a class="brand" href="#home" aria-label="Nhật Nam IOS trang chủ"><span class="brand-mark">NN</span><span>NHẬT NAM IOS<small>IOS & ANDROID • SUPPORT</small></span></a>
+  <nav class="nav"><a href="#bang-gia">Bảng giá</a><a href="#dich-vu">Dịch vụ</a><a href="#lien-he">Liên hệ</a></nav>
+  <a class="contact-btn" href="https://zalo.me/0862721484" target="_blank" rel="noopener">↗ Liên hệ ngay</a>
+</header>
+<main class="wrap" id="home">
+  <section class="hero">
+    <div>
+      <div class="eyebrow"><span class="pulse"></span> HỆ SINH THÁI NHẬT NAM IOS</div>
+      <h1>NHẬT NAM <span>IOS STORE</span></h1>
+      <p class="lead">Bảng giá dịch vụ được trình bày rõ ràng, hỗ trợ iOS & Android. Chọn gói phù hợp và liên hệ trực tiếp để được tư vấn chi tiết trước khi đặt dịch vụ.</p>
+      <div class="hero-actions"><a class="primary" href="#bang-gia">✦ Xem bảng giá</a><a class="secondary" href="https://zalo.me/0862721484" target="_blank" rel="noopener">◉ Chat Zalo hỗ trợ</a></div>
+    </div>
+    <div class="hero-art" aria-label="Biểu tượng Nhật Nam IOS">
+      <div class="floating f1">✦ <b>HỖ TRỢ</b><br>iOS & Android</div>
+      <div class="orb"><div class="mascot">👾</div><div class="orb-label">NHẬT NAM IOS</div></div>
+      <div class="floating f2">⚡ <b>NHANH GỌN</b><br>Tư vấn theo nhu cầu</div>
+    </div>
+  </section>
+  <section id="bang-gia">
+    <div class="section-head"><div><div class="tag">01 / PRICE LIST</div><h2>Bảng giá nổi bật</h2><p>Giá tham khảo theo bảng giá bạn cung cấp.</p></div></div>
+    <div class="price-feature">
+      <div class="feature-brand"><div class="emblem">👾</div><h3>NHẬT NAM IOS</h3><p>PREMIUM SERVICE</p></div>
+      <div class="price-list">
+        <div class="price-row"><span class="ico">◷</span><span>Gói 1 giờ</span><strong class="price">10K</strong></div>
+        <div class="price-row"><span class="ico">▦</span><span>Gói 1 ngày</span><strong class="price">50K</strong></div>
+        <div class="price-row"><span class="ico">▦</span><span>Gói 1 tuần</span><strong class="price">150K</strong></div>
+        <div class="price-row"><span class="ico">▦</span><span>Gói 1 tháng</span><strong class="price">250K</strong></div>
+      </div>
+    </div>
+  </section>
+  <section id="dich-vu">
+    <div class="section-head"><div><div class="tag">02 / SERVICES</div><h2>Dịch vụ & tiện ích</h2><p>Nhấn liên hệ để xác nhận tính năng, thiết bị tương thích và giá cuối cùng.</p></div></div>
+    <div class="products">
+      <article class="product"><div class="product-icon">🎯</div><div><h3>Aimlock Mode</h3><p>Gói tuỳ chọn theo nhu cầu.</p></div><strong class="price">100K–500K</strong></article>
+      <article class="product"><div class="product-icon">🧭</div><div><h3>Aim: Neck, Drag</h3><p>Liên hệ để được tư vấn chi tiết.</p></div><strong class="price">200K</strong></article>
+      <article class="product"><div class="product-icon">⚙️</div><div><h3>DPI</h3><p>Tuỳ chỉnh theo thiết bị.</p></div><strong class="price">50K–300K</strong></article>
+      <article class="product"><div class="product-icon">📱</div><div><h3>App Config</h3><p>Cấu hình ứng dụng.</p></div><strong class="price">50K</strong></article>
+      <article class="product full"><div class="product-icon">🔫</div><div><h3>Order Mod Skin FF</h3><p>Thực hiện theo yêu cầu sau khi xác nhận chi tiết.</p></div><strong class="price">20K</strong></article>
+    </div>
+  </section>
+  <section class="contact-panel" id="lien-he">
+    <div><div class="tag">03 / CONTACT</div><h2>Cần tư vấn gói phù hợp?</h2><p>Nhắn Zalo Nhật Nam IOS để hỏi giá, thời hạn và hướng dẫn sử dụng.<br>Hotline/Zalo: <strong style="color:#eaf8ff">0862 721 484</strong></p></div>
+    <div class="contact-actions"><a class="primary zalo" href="https://zalo.me/0862721484" target="_blank" rel="noopener">◉ Mở Zalo</a><button class="secondary" onclick="toggleChat(true)">✦ Chat AI Nhật Nam</button></div>
+  </section>
+  <footer class="footer"><span>© <span id="year"></span> <strong>NHẬT NAM IOS</strong> · Thiết kế giao diện hiện đại</span><span>iOS / Android &nbsp; • &nbsp; Hỗ trợ trực tuyến</span></footer>
+</main>
+<button class="chat-toggle" onclick="toggleChat()" aria-label="Mở chat AI Nhật Nam"><span>✦</span><span>Chat AI Nhật Nam</span></button>
+<section class="chatbox" id="chatbox" aria-label="Chat tư vấn Nhật Nam" aria-live="polite">
+  <div class="chat-head"><div class="chat-avatar">🤖</div><div><strong>AI NHẬT NAM</strong><small>Trợ lý tư vấn tự động · Bản demo</small></div><button class="close-chat" onclick="toggleChat(false)" aria-label="Đóng chat">✕</button></div>
+  <div class="messages" id="messages"><div class="msg">Chào bạn! Mình là trợ lý Nhật Nam IOS 👋 Bạn muốn xem bảng giá, hỏi về dịch vụ hay liên hệ hỗ trợ?</div></div>
+  <div class="quick"><button onclick="quickAsk('Bảng giá')">Bảng giá</button><button onclick="quickAsk('Dịch vụ DPI')">DPI</button><button onclick="quickAsk('Liên hệ hỗ trợ')">Liên hệ</button></div>
+  <form class="chat-input" id="chatForm"><input id="chatText" autocomplete="off" placeholder="Nhập câu hỏi..." aria-label="Nhập câu hỏi"><button type="submit">Gửi</button></form>
+</section>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+function toggleChat(force){const box=document.getElementById('chatbox');if(typeof force==='boolean')box.classList.toggle('open',force);else box.classList.toggle('open');if(box.classList.contains('open'))setTimeout(()=>document.getElementById('chatText').focus(),100)}
+const answers=[
+{keys:['giá','bảng','bao nhiêu','gói'],text:'Bảng giá tham khảo:\\n• 1 giờ: 10K\\n• 1 ngày: 50K\\n• 1 tuần: 150K\\n• 1 tháng: 250K\\n\\nAimlock Mode: 100K–500K; Aim Neck/Drag: 200K; DPI: 50K–300K; App Config: 50K; Order Mod Skin FF: 20K. Nhắn Zalo để xác nhận gói phù hợp nhé!'},
+{keys:['dpi'],text:'Dịch vụ DPI có giá tham khảo 50K–300K, tuỳ lựa chọn. Bạn nên cung cấp mẫu thiết bị và nhu cầu khi liên hệ để được tư vấn cụ thể.'},
+{keys:['aimlock','aim','neck','drag'],text:'Aimlock Mode có giá tham khảo 100K–500K. Aim: Neck/Drag là 200K. Giá cuối cùng và khả năng tương thích cần được xác nhận trực tiếp với bộ phận hỗ trợ.'},
+{keys:['skin','mod skin','ff'],text:'Order Mod Skin FF có giá tham khảo từ 20K theo yêu cầu. Bạn hãy nhắn Zalo để mô tả yêu cầu và xác nhận trước khi đặt.'},
+{keys:['zalo','liên hệ','hỗ trợ','hotline','admin'],text:'Bạn có thể liên hệ Nhật Nam IOS qua Zalo: 0862 721 484. Bấm nút “Mở Zalo” trên trang để bắt đầu trò chuyện.'},
+{keys:['xin chào','hello','chào','hi'],text:'Xin chào bạn 👋 Mình có thể giúp bạn xem bảng giá, tìm hiểu dịch vụ hoặc mở liên hệ Zalo. Bạn cần tư vấn mục nào?'}
+];
+function reply(text){const lower=text.toLowerCase();const hit=answers.find(a=>a.keys.some(k=>lower.includes(k)));return hit?hit.text:'Mình chưa có đủ thông tin để trả lời chính xác câu này. Bạn có thể hỏi về bảng giá, DPI, Aimlock, Mod Skin FF hoặc liên hệ trực tiếp Zalo 0862 721 484 nhé.'}
+function addMsg(text,who){const el=document.createElement('div');el.className='msg'+(who==='user'?' user':'');el.textContent=text;const list=document.getElementById('messages');list.appendChild(el);list.scrollTop=list.scrollHeight}
+function sendChat(text){text=text.trim();if(!text)return;addMsg(text,'user');document.getElementById('chatText').value='';setTimeout(()=>addMsg(reply(text),'bot'),220)}
+function quickAsk(t){sendChat(t)}
+document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();sendChat(document.getElementById('chatText').value)});
+</script>
+</body>
+</html>
